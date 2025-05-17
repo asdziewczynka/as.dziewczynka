@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Losowy Tekst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Great Vibes', cursive;
+    }
+    #tekst {
+      font-size: 8vw; /* duża, skalująca się czcionka */
+      color: #ff69b4;
+      text-align: center;
+      max-width: 90%;
+      line-height: 1.2;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="tekst">Ładowanie tekstu...</div>
+
+  <script>
+    // Tu wpisujesz swoje teksty - pamiętaj, że każdy tekst musi być w cudzysłowie i oddzielony przecinkiem
+    const teksty = [
+      "\"zerżnę cię tak mocno, że nie będziesz mogła chodzić przez tydzień&quot\"",
+      "\"chce cię złapać za twoje piękne włosy jak będę z tyłu&quot;\"",
+      "\"Uwielbiamy z kumplami patrzeć, jak ćwiczysz. Obserwujemy Cię od tygodnia. Najbardziej podoba nam się, gdy się schylasz i widać cipkę przez majtki. Rozmawiamy o tym, jak weźmiemy Cię od tyłu. Zobaczysz, że dojdziesz i będzie Ci cudownie\"",
+      "\"Właśnie obserwujemy Cię przez okno sypialni. Nie możemy się doczekać, aż Cle wyruchamy na wszystkie strony. Będziemy Cię ruchać aż poleci krew, aż zaczniesz wrzeszczeć.\"",
+      "\"A co taka smutna mordka? Wakacje wakacjami ale czuje że twoja cipka nie była posuwana i masz chcicę stąd ta minka\"",
+      "\"Pieściłbym ci cycunie. Wyglądasz jak laleczka rozmyślam o tym jak wygląda twoja dupka i cipka\"",
+      "\"Chcę cię mieć na kolanach, robić z tobą, co chcę. Ty jesteś moją zabawką, a ja twoim panem.\"",
+      "\"Twoja buźka nadaje się tylko do wyruchania\"",
+      "\"Jesteś kula do kręgli? bo chcę włożyć w Ciebie 3 palce:p\"",
+      "\"masz piekne nózki do całowania i pieszczenia.Jestes cata sliczniutka, az sie grzeszy chce.mmm\"",
+      "\"sexy babe with very sexy toes........\"",
+      "\"Fajna dupa i wyglądasz jak ćpunka\"",
+    ];
+
+    // Losowanie tekstu
+    function losujTekst() {
+      const index = Math.floor(Math.random() * teksty.length);
+      document.getElementById('tekst').textContent = teksty[index];
+    }
+
+    losujTekst(); // wywołanie przy załadowaniu strony
+  </script>
+</body>
+</html>
